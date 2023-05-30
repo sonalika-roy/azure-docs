@@ -15,8 +15,9 @@ In this quickstart, you'll do the following steps:
 
 1. Create a Event Grid namespace, using the Azure portal.
 2. Create a Event Grid namespace topic, using the Azure portal.
-3. Write a .NET console application to send a set of messages to the topic
-4. Write a .NET console application to receive those messages from the topic.
+3. Create a event subscription, using the Azure portal.
+4. Write a .NET console application to send a set of messages to the topic
+5. Write a .NET console application to receive those messages from the topic.
 
 > [!NOTE]
 > This quick start provides step-by-step instructions to implement a simple scenario of sending a batch of messages to a Service Bus queue and then receiving them. For an overview of the .NET client library, see [Azure Service Bus client library for .NET](https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/servicebus/Azure.Messaging.ServiceBus/README.md). For more samples, see [Service Bus .NET samples on GitHub](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/servicebus/Azure.Messaging.ServiceBus/samples).
@@ -47,7 +48,7 @@ If you're new to the service, see [Event Grid overview](overview.md) before you 
 
 [!INCLUDE [event-grid-create-event-subscriptions-portal](./includes/event-grid-create-event-subscriptions-portal.md)]
 
-[!INCLUDE [service-bus-passwordless-template-tabbed](../../includes/passwordless/service-bus/service-bus-passwordless-template-tabbed.md)]
+[!INCLUDE [service-bus-passwordless-template-tabbed](../../includes/passwordless/event-grid/event-grid-passwordless-template-tabbed.md)]
 
 ## Launch Visual Studio and sign-in to Azure
 
@@ -63,9 +64,9 @@ You can authorize access to the service bus namespace using the following steps:
     :::image type="content" source="..//storage/blobs/media/storage-quickstart-blobs-dotnet/sign-in-visual-studio-account-small.png" alt-text="Screenshot showing the account selection.":::
 
 
-## Send messages to the queue
+## Send messages to the topic
 
-This section shows you how to create a .NET console application to send messages to a Service Bus queue.
+This section shows you how to create a .NET console application to send messages to a Event Grid topic.
 
 > [!NOTE]
 > This quick start provides step-by-step instructions to implement a simple scenario of sending a batch of messages to a Service Bus queue and then receiving them. For more samples on other and advanced scenarios, see [Service Bus .NET samples on GitHub](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/servicebus/Azure.Messaging.ServiceBus/samples).
@@ -79,8 +80,8 @@ This section shows you how to create a .NET console application to send messages
     1. Select **Console App** from the results list.
     1. Then, select **Next**.
 
-        :::image type="content" source="./media/service-bus-dotnet-get-started-with-queues/new-send-project.png" alt-text="Image showing the Create a new project dialog box with C# and Console selected":::
-1. Enter **QueueSender** for the project name, **ServiceBusQueueQuickStart** for the solution name, and then select **Next**.
+        :::image type="content" source="./media/event-grid-dotnet-get-started-with-events/new-send-project.png" alt-text="Image showing the Create a new project dialog box with C# and Console selected":::
+1. Enter **EventSender** for the project name, **EventGridQuickStart** for the solution name, and then select **Next**.
 
     :::image type="content" source="./media/service-bus-dotnet-get-started-with-queues/project-solution-names.png" alt-text="Image showing the solution and project names in the Configure your new project dialog box ":::
 1. On the **Additional information** page, select **Create** to create the solution and the project.
