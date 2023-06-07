@@ -2,8 +2,8 @@
 title: Quickstart - Use Event Grid pull delivery from .NET app
 description: This quickstart shows you how to send messages to and receive messages from Azure Event Grid namespace topics using the .NET programming language.
 ms.topic: quickstart
-ms.author: jafernan
-author: jfggdl
+ms.author: sonalika-roy
+author: sonalika-roy
 ms.custom: references_regions
 ms.date: 05/30/2023
 ---
