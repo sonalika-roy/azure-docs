@@ -9,7 +9,7 @@ ms.date: 05/30/2023
 ---
 
 
-# Quickstart: Send and receive messages from an Azure Service Bus queue (.NET)
+# Quickstart: Send and receive messages from an Azure Event Grid Namespace topic (.NET)
 
 In this quickstart, you'll do the following steps:
 
@@ -50,16 +50,9 @@ If you're new to the service, see [Event Grid overview](overview.md) before you 
 
 ## Launch Visual Studio and sign-in to Azure
 
-You can authorize access to the service bus namespace using the following steps:
+You can authorize access to the event grid namespace using the following steps:
 
 1. Launch Visual Studio. If you see the **Get started** window, select the **Continue without code** link in the right pane.
-1. Select the **Sign in** button in the top right of Visual Studio.
-
-    :::image type="content" source="./media/service-bus-dotnet-get-started-with-queues/azure-sign-button-visual-studio.png" alt-text="Screenshot showing a button to sign in to Azure using Visual Studio.":::
-
-1. Sign-in using the Azure AD account you assigned a role to previously.
-
-    :::image type="content" source="..//storage/blobs/media/storage-quickstart-blobs-dotnet/sign-in-visual-studio-account-small.png" alt-text="Screenshot showing the account selection.":::
 
 
 ## Send messages to the topic
@@ -148,20 +141,6 @@ This section shows you how to create a .NET console application to send messages
 
     > [!IMPORTANT]
     > In most cases, it will take a minute or two for the role assignment to propagate in Azure. In rare cases, it may take up to **eight minutes**. If you receive authentication errors when you first run your code, wait a few moments and try again.
-8. In the Azure portal, follow these steps:
-    1. Navigate to your Service Bus namespace.
-    1. On the **Overview** page, select the queue in the bottom-middle pane.
-
-        :::image type="content" source="./media/service-bus-dotnet-get-started-with-queues/select-queue.png" alt-text="Image showing the Service Bus Namespace page in the Azure portal with the queue selected." lightbox="./media/service-bus-dotnet-get-started-with-queues/select-queue.png":::
-
-    1. Notice the values in the **Essentials** section.
-
-        :::image type="content" source="./media/service-bus-dotnet-get-started-with-queues/sent-messages-essentials.png" alt-text="Image showing the number of messages received and the size of the queue." lightbox="./media/service-bus-dotnet-get-started-with-queues/sent-messages-essentials.png":::
-
-    Notice the following values:
-    - The **Active** message count value for the queue is now **3**. Each time you run this sender app without retrieving the messages, this value increases by 3.
-    - The **current size** of the queue increments each time the app adds messages to the queue.
-    - In the **Messages** chart in the bottom **Metrics** section, you can see that there are three incoming messages for the queue.
 
 ## Pull messages from the Topic
 
